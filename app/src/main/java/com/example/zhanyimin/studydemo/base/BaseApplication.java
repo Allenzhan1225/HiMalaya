@@ -2,6 +2,7 @@ package com.example.zhanyimin.studydemo.base;
 
 import android.app.Application;
 
+import com.example.zhanyimin.studydemo.utils.LogUtil;
 import com.ximalaya.ting.android.opensdk.constants.DTransferConstants;
 import com.ximalaya.ting.android.opensdk.datatrasfer.CommonRequest;
 
@@ -34,11 +35,8 @@ public class BaseApplication extends Application{
         }
 
 
-//        OkHttpClient okHttpClient = new OkHttpClient.Builder()
-//                .connectionSpecs(Arrays.asList(
-//                        ConnectionSpec.MODERN_TLS,
-//                        ConnectionSpec.COMPATIBLE_TLS,
-//                        ConnectionSpec.CLEARTEXT)).build();
+        //初始化 Log
+        LogUtil.init(this.getPackageName(),false);
 
     }
 }

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.zhanyimin.studydemo.utils.LogUtil;
 import com.ximalaya.ting.android.opensdk.datatrasfer.CommonRequest;
 import com.ximalaya.ting.android.opensdk.datatrasfer.IDataCallBack;
 import com.ximalaya.ting.android.opensdk.model.category.Category;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
                     int size = categories.size();
                     Log.d(TAG,"Category size ------<" + size +">-----------");
                     for (Category category : categories) {
-                       Log.d(TAG,"category ---------<" + category.getCategoryName()+">-----------");
+//                       Log.d(TAG,"category ---------<" + category.getCategoryName()+">-----------");
+                        LogUtil.d(TAG,"category ---------<" + category.getCategoryName()+">-----------");
                     }
                 }
             }
